@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Container from "./Container";
 
-const Headertext = ({Headertext, className}) => {
+const Headertext = ({ Headertext, className }) => {
   return (
-    <h2 className={`font-DM font-bold text-[39px] capitalize ${className}`}>{Headertext}</h2>
-  )
-}
+    <h2 className={`font-DM font-bold text-[39px] text-center sm:text-start capitalize ${className}`}>
+      {Headertext}
+    </h2>
+  );
+};
 
-export default Headertext
+export default Headertext;

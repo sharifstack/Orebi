@@ -11,7 +11,7 @@ import special4 from "/SpecialOffer/special4.png";
 const SpecialOffer = () => {
   return (
     <div className="md:py-28 py-14">
-      <Container className="mb-12">
+      <Container className="sm:mb-12 mb-3">
         <Headertext Headertext="Special Offers" />
       </Container>
       <Container className="md:flex md:justify-between grid justify-center ">

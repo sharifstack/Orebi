@@ -11,9 +11,6 @@ import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Arrivals = () => {
-
-  
-
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -21,11 +18,12 @@ const Arrivals = () => {
         className="absolute right-5 top-1/2 -translate-y-full rounded-full w-16 h-16 justify-center items-center"
         style={{ ...style, display: "flex", background: "#979797" }}
         onClick={onClick}
-      ><FaArrowRight className="text-white" />
-</div>
+      >
+        <FaArrowRight className="text-white" />
+      </div>
     );
   }
-  
+
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -38,8 +36,6 @@ const Arrivals = () => {
       </div>
     );
   }
-
- 
 
   var settings = {
     dots: false,
@@ -57,25 +53,26 @@ const Arrivals = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
@@ -84,9 +81,10 @@ const Arrivals = () => {
         <Headertext Headertext="New Arrivals" />
       </Container>
 
-      <Container className="max-w-[1640px] ">
+      <Container className="max-w-[1640px]">
         <Slider {...settings}>
-          <ProductItem className='w-full px-5'
+          <ProductItem
+            className="w-full px-5"
             src={product01}
             Pname="Basic Crew Neck Tee"
             Price="44.00"
@@ -94,7 +92,8 @@ const Arrivals = () => {
             Offer="20%"
             OfferEye={true}
           />
-          <ProductItem className='w-full px-5'
+          <ProductItem
+            className="w-full px-5"
             src={product02}
             Pname="Basic Crew Neck Tee"
             Price="44.00"
@@ -102,14 +101,15 @@ const Arrivals = () => {
             Offer="New"
             OfferEye={true}
           />
-          <ProductItem className='w-full px-5'
+          <ProductItem
+            className="w-full px-5"
             src={product03}
             Pname="Basic Crew Neck Tee"
             Price="44.00"
             Color="Black"
-            
           />
-          <ProductItem className='w-full px-5'
+          <ProductItem
+            className="w-full px-5"
             src={product04}
             Pname="Basic Crew Neck Tee"
             Price="44.00"
