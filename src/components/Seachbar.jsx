@@ -56,7 +56,7 @@ const Seachbar = () => {
         </div>
 
         {show && (
-          <ul className="absolute left-0 top-full w-[263px] z-30">
+          <ul className="absolute left-0 top-full w-[45%] sm:w-[263px] z-30 cursor-pointer">
             <Li
               className="w-full block py-4 px-5 font-DM font-normal text-sm  bg-[#262626] hover:text-white hover:pl-[31px] hover:font-bold border-b border-[#2D2D2D] "
               Litext="Accesories"
@@ -89,7 +89,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Computers
                   </h2>
@@ -116,7 +116,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3 w-max">
+                <ul className="hidden sm:flex flex-col gap-3 w-max">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626] flex">
                     Smart watches
                   </h2>
@@ -143,7 +143,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Cameras
                   </h2>
@@ -176,8 +176,8 @@ const Seachbar = () => {
               className="w-full block py-4 px-5 font-DM font-normal text-sm  bg-[#262626] hover:text-white hover:pl-[31px] hover:font-bold border-b border-[#2D2D2D] "
               Litext="Furniture"
             >
-              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-green-200 border h-full pt-7 pr-[47px] pb-8 pl-10 ">
-                <ul className=" flex flex-col gap-3 ">
+              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-white border h-full pt-7 pr-[47px] pb-8 pl-10 ">
+                <ul className="hidden sm:flex  flex-col gap-3 ">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Phones
                   </h2>
@@ -231,7 +231,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3 w-max">
+                <ul className="hidden sm:flex  flex-col gap-3 w-max">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626] flex">
                     Smart watches
                   </h2>
@@ -258,7 +258,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex  flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Cameras
                   </h2>
@@ -291,8 +291,8 @@ const Seachbar = () => {
               className="w-full block py-4 px-5 font-DM font-normal text-sm  bg-[#262626] hover:text-white hover:pl-[31px] hover:font-bold border-b border-[#2D2D2D] "
               Litext="Electronics"
             >
-              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-blue-200 border h-full pt-7 pr-[47px] pb-8 pl-10 ">
-                <ul className=" flex flex-col gap-3 ">
+              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-white border h-full pt-7 pr-[47px] pb-8 pl-10 ">
+                <ul className=" hidden sm:flex  flex-col gap-3 ">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Phones
                   </h2>
@@ -319,7 +319,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex  flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Computers
                   </h2>
@@ -373,7 +373,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex  flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Cameras
                   </h2>
@@ -406,8 +406,8 @@ const Seachbar = () => {
               className="w-full block py-4 px-5 font-DM font-normal text-sm  bg-[#262626] hover:text-white hover:pl-[31px] hover:font-bold border-b border-[#2D2D2D] "
               Litext="Clothes"
             >
-              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-red-200 border h-full pt-7 pr-[47px] pb-8 pl-10 ">
-                <ul className=" flex flex-col gap-3 ">
+              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-white border h-full pt-7 pr-[47px] pb-8 pl-10 ">
+                <ul className=" hidden sm:flex  flex-col gap-3 ">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Phones
                   </h2>
@@ -434,7 +434,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex  flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Computers
                   </h2>
@@ -461,7 +461,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3 w-max">
+                <ul className="hidden sm:flex  flex-col gap-3 w-max">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626] flex">
                     Smart watches
                   </h2>
@@ -521,8 +521,8 @@ const Seachbar = () => {
               className="w-full block py-4 px-5 font-DM font-normal text-sm  bg-[#262626] hover:text-white hover:pl-[31px] hover:font-bold border-b border-[#2D2D2D] "
               Litext="Bags"
             >
-              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-gray-200 border h-full pt-7 pr-[47px] pb-8 pl-10 ">
-                <ul className=" flex flex-col gap-3 ">
+              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-white border h-full pt-7 pr-[47px] pb-8 pl-10 ">
+                <ul className=" hidden sm:flex  flex-col gap-3 ">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Phones
                   </h2>
@@ -549,7 +549,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex  flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Computers
                   </h2>
@@ -603,7 +603,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex  flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Cameras
                   </h2>
@@ -633,11 +633,11 @@ const Seachbar = () => {
             </Li>
 
             <Li
-              className="w-full block py-4 px-5 font-DM font-normal text-sm  bg-[#262626] hover:text-white hover:pl-[31px] hover:font-bold border-b border-[#2D2D2D] "
+              className="w-full block py-4 px-5 font-DM font-normal text-sm  bg-[#262626] hover:text-white hover:pl-[31px] hover:font-bold border-b border-[#2D2D2D]  "
               Litext="Home appliances"
             >
-              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-gray-300 border h-full pt-7 pr-[47px] pb-8 pl-10 ">
-                <ul className=" flex flex-col gap-3 ">
+              <div className="absolute left-full top-0 hidden group-hover:flex gap-[50px] bg-white border h-full pt-7 pr-[47px] pb-8 pl-10 ">
+                <ul className=" hidden sm:flex  flex-col gap-3 ">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Phones
                   </h2>
@@ -691,7 +691,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3 w-max">
+                <ul className="hidden sm:flex  flex-col gap-3 w-max">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626] flex">
                     Smart watches
                   </h2>
@@ -718,7 +718,7 @@ const Seachbar = () => {
                   </li>
                 </ul>
 
-                <ul className="flex flex-col gap-3">
+                <ul className="hidden sm:flex  flex-col gap-3">
                   <h2 className="mb-2 font-DM font-bold text-base text-[#262626]">
                     Cameras
                   </h2>
@@ -829,7 +829,7 @@ const Seachbar = () => {
       </Container>
 
       {filterData.length > 0 && (
-        <ul className="bg-white rounded w-[601px] px-5 shadow-md gap-2 absolute left-[51.4%] -translate-x-1/2 z-20 cursor-pointer overflow-y-auto h-auto">
+        <ul className="bg-white rounded w-full sm:w-[601px] px-5 shadow-md gap-2 absolute left-[51.4%] -translate-x-1/2 z-20 cursor-pointer overflow-y-auto h-auto">
           {filterData.map((item, index) => (
             <li className="flex justify-between items-center py-2 " key={index}>
               <div className="flex items-center gap-5">

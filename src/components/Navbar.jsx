@@ -35,7 +35,7 @@ const Navbar = () => {
         />
 
         <ul
-          className={`transition-all duration-500 flex gap-x-10 gap-y-4 md:gap-y-0 py-5 md:py-0 pl-4 md:pl-0 bg-slate-200 md:bg-transparent items-start z-10  flex-col md:flex-row md:static absolute left-0 top-full w-1/2   md:w-auto ${
+          className={`transition-all duration-500 flex gap-x-10 gap-y-4 md:gap-y-0 py-5 md:py-0 pl-4 md:pl-0 bg-slate-200 md:bg-transparent items-start z-20  flex-col md:flex-row md:static absolute left-0 top-full  w-1/2  md:w-auto ${
             show
               ? "translate-x-0  visible opacity-100 "
               : "-translate-x-full invisible opacity-0 "

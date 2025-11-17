@@ -6,9 +6,7 @@ import banner02 from "/banner02.jpg";
 import banner03 from "/banner03.jpg";
 
 const Banner = () => {
-
-  let [active , SetActive] = useState (0);
-
+  let [active, SetActive] = useState(0);
 
   var settings = {
     arrows: false,
@@ -17,34 +15,39 @@ const Banner = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
         style={{
           borderRadius: "0",
           padding: "0",
-          position:"absolute",
+          position: "absolute",
           left: "10%",
           top: "50%",
-          transform: "translateY(-50%)"
+          transform: "translateY(-50%)",
         }}
       >
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: i => (
-      <div className={`transition-all text-[10px] border-r-2 flex items-center  ${active == i ? "text-Primary border-Primary" : " text-transparent border-white" }`}
+    customPaging: (i) => (
+      <div
+        className={`transition-all text-[10px] border-r-2 flex items-center  ${
+          active == i
+            ? "text-Primary border-Primary"
+            : " text-transparent border-white"
+        }`}
         style={{
           width: "22px",
-          height: "30px"
+          height: "30px",
         }}
       >
         0{i + 1}
       </div>
     ),
 
-    beforeChange:(item,i)=> {
-        SetActive(i)
-    }
+    beforeChange: (item, i) => {
+      SetActive(i);
+    },
   };
 
   return (
