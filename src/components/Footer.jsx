@@ -8,10 +8,10 @@ const Footer = () => {
   return (
     <div className="bg-[#F5F5F3] md:py-14 py-5">
       <Container>
-        <div className="px-4 md:px-0 grid md:grid-cols-12 grid-cols-4 grid-rows-1">
+        <div className="px-4 md:px-0 grid md:grid-cols-12 sm:grid-cols-4 sm:grid-rows-1">
           <div className="MENU sm:col-span-2 ">
-            <h3 className="font-DM leading-6 font-bold mb-2 sm:mb-4">MENU</h3>
-            <ul className="font-DM leading-6 font-normal text-sm flex flex-row sm:flex-col gap-1.5 text-[#6D6D6D]">
+            <h3 className="font-DM leading-6 font-bold mb-1 sm:mb-4">MENU</h3>
+            <ul className="font-DM leading-6 font-normal text-sm flex flex-row sm:flex-col gap-4 sm:gap-1.5 text-[#6D6D6D]">
               <li>
                 <Link>Home</Link>
               </li>
@@ -69,23 +69,23 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="four md:col-span-2 ">
+          <div className="four md:col-span-2 my-3 sm:my-0">
             <Link className="block font-DM sm:leading-7 font-bold text-Primary">
-              <h5> (052) 611-5711</h5>
+              <h5 className="text-sm sm:text-base "> (052) 611-5711</h5>
             </Link>
             <Link className="font-DM leading-7 font-bold text-Primary">
-              company@domain.com
+              <h2 className="text-sm sm:text-base ">company@domain.com</h2>
             </Link>
-            <p className="font-DM leading-6 font-normal text-sm flex flex-col text-[#6D6D6D] mt-4">
+            <p className="font-DM leading-6 font-normal text-sm flex flex-col text-[#6D6D6D] sm:mt-4">
               575 Crescent Ave. Quakertown, PA 18951
             </p>
           </div>
-          <div className="five ml-[138px] md:col-span-4 col-span-1 mt-4">
+          <div className="five sm:ml-[138px] md:col-span-4 col-span-1 mb-1 sm:mb-0">
             <img src={footer} />
           </div>
         </div>
-        <div className="flex justify-between md:mt-16 mt-4 px-4 md:px-0 gap-4 md:gap-0">
-          <div className="icons flex justify-center items-center gap-x-6">
+        <div className="flex sm:justify-between flex-col sm:flex-row md:mt-16 px-4 md:px-0 mt-2 md:gap-0">
+          <div className="icons flex sm:justify-center items-center gap-x-6 text-xl sm:text-base">
             <Link>
               <FaFacebookF />
             </Link>
@@ -97,8 +97,9 @@ const Footer = () => {
             </Link>
           </div>
 
-          <h2 className="font-DM leading-6 font-normal text-sm text-[#6D6D6D] flex flex-wrap">
-            2020 Orebi Minimal eCommerce Figma Template by Adveits
+          <h2 className="font-DM leading-6 font-normal text-sm text-[#6D6D6D] flex justify-center sm:justify-normal items-center gap-1 ">
+            <p className="text-xl">&copy;</p> Copyright Sharif 2025. All right
+            reserved
           </h2>
         </div>
       </Container>
