@@ -16,7 +16,7 @@ const ProductItem = ({Pname, Price, Color, Offer, src, OfferEye,className }) => 
   let [Offershow, SetOfferShow] = useState(OfferEye);
     
   return (
-    <div className={`w-[370px] ${className}`}>
+    <div className={`w-[370px] ${className} shadow-lg sm:shadow-none mx-2 sm:mx-0`}>
       <div className="image w-full h-[370px] relative group">
         <img className="w-full h-full object-cover" src={src} />
 
