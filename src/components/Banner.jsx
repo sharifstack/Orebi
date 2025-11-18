@@ -31,7 +31,7 @@ const Banner = () => {
     ),
     customPaging: (i) => (
       <div
-        className={`transition-all text-[10px] border-r-2 flex items-center  ${
+        className={`transition-all text-[10px] border-r-2 sm:flex items-center hidden ${
           active == i
             ? "text-Primary border-Primary"
             : " text-transparent border-white"
@@ -51,7 +51,7 @@ const Banner = () => {
   };
 
   return (
-    <div>
+    <div className="mt-2 sm:mt-0">
       <Slider {...settings}>
         <Image ImageClass="w-full" src={banner01} />
         <Image ImageClass="w-full" src={banner02} />
