@@ -43,7 +43,7 @@ const Navbar = () => {
         >
           <Li className="text-[#262626]" Litext="Home" href="/" />
           <Li Litext="Shop" href="/products" />
-          <Li Litext="About" href="/About" />
+          <Li Litext="About" href="/about" />
           <Li Litext="Contacts" href="/Contacts" />
           <Li Litext="Journal" href="/Journal" />
         </ul>

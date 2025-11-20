@@ -36,7 +36,7 @@ export const Shop = () => {
         <Bredcumb />
 
         <div className="flex flex-col sm:flex-row sm:justify-between">
-          <div className="left sm:w-[370px]  px-5 sm:px-0">
+          <div className="left sm:w-[370px] px-5 sm:px-0">
             <ul>
               <h2 className="font-DM  font-bold text-xl text-Primary ">
                 Shop by Category

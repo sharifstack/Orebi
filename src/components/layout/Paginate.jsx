@@ -36,7 +36,7 @@ const Paginate = ({ itemsPerPage }) => {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row gap-x-10 gap-y-12">
+      <div className="flex flex-col sm:flex-row flex-nowrap sm:flex-wrap gap-x-10 gap-y-12">
         <Items currentItems={currentItems} />
       </div>
       <div className="sm:flex sm:justify-between items-center mt-12 px-2 sm:px-0">
