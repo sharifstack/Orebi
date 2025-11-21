@@ -8,28 +8,28 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="my-32">
+    <div className="pt-6 sm:pt-32 pb-10 sm:pb-36 px-2 sm:px-0">
       <Container>
         <Bredcumb />
-        <div className="image flex gap-10">
-          <div className="left w-1/2 bg-blue-200">
+        <div className="image flex flex-col sm:flex-row gap-10">
+          <div className="left sm:w-1/2 bg-blue-200">
             <Image href={"/products"} src={img1} alt={img1} />
           </div>
-          <div className="right w-1/2 bg-purple-200">
+          <div className="right sm:w-1/2 bg-purple-200">
             <Image href={"/products"} src={img2} alt={img2} />
           </div>
         </div>
 
-        <div className="my-32">
-          <p className="font-DM text-[44px] font-normal text-Primary">
+        <div className="my-16 sm:my-32">
+          <p className="font-DM sm:text-[44px] font-normal text-Primary">
             Orebi is one of the world’s leading ecommerce brands and is
             internationally recognized for celebrating the essence of classic
             Worldwide cool looking style.
           </p>
         </div>
-        <div className="information flex gap-10">
-          <div className="Our-Vision w-1/3">
-            <h2 className="font-DM text-2xl font-bold text-Primary mb-2.5">
+        <div className="information flex flex-col sm:flex-row gap-4 sm:gap-10">
+          <div className="Our-Vision sm:w-1/3">
+            <h2 className="font-DM text-2xl font-bold text-Primary mb-2.5 text-center sm:text-start">
               Our Vision
             </h2>
             <p className="font-DM text-base text-ptext mb-10">
@@ -40,8 +40,8 @@ const About = () => {
             </p>
           </div>
 
-          <div className="Our-Vision w-1/3">
-            <h2 className="font-DM text-2xl font-bold text-Primary mb-2.5">
+          <div className="Our-Vision sm:w-1/3">
+            <h2 className="font-DM text-2xl font-bold text-Primary mb-2.5 text-center sm:text-start">
               Our Story
             </h2>
             <p className="font-DM text-base text-ptext mb-10">
@@ -54,8 +54,8 @@ const About = () => {
             </p>
           </div>
 
-          <div className="Our-Vision w-1/3">
-            <h2 className="font-DM text-2xl font-bold text-Primary mb-2.5">
+          <div className="Our-Vision sm:w-1/3">
+            <h2 className="font-DM text-2xl font-bold text-Primary mb-2.5 text-center sm:text-start">
               Our Brands
             </h2>
             <p className="font-DM text-base text-ptext mb-10">

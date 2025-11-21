@@ -84,7 +84,7 @@ const Arrivals = () => {
       <Container className="max-w-[1640px]">
         <Slider {...settings}>
           <ProductItem
-            className="w-full px-5"
+            className="w-full px-2"
             src={product01}
             Pname="Basic Crew Neck Tee"
             Price="44.00"
@@ -93,7 +93,7 @@ const Arrivals = () => {
             OfferEye={true}
           />
           <ProductItem
-            className="w-full px-5"
+            className="w-full px-2"
             src={product02}
             Pname="Basic Crew Neck Tee"
             Price="44.00"
@@ -102,14 +102,14 @@ const Arrivals = () => {
             OfferEye={true}
           />
           <ProductItem
-            className="w-full px-5"
+            className="w-full px-2"
             src={product03}
             Pname="Basic Crew Neck Tee"
             Price="44.00"
             Color="Black"
           />
           <ProductItem
-            className="w-full px-5"
+            className="w-full px-2"
             src={product04}
             Pname="Basic Crew Neck Tee"
             Price="44.00"

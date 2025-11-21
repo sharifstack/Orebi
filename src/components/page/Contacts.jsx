@@ -7,7 +7,7 @@ import Button from "../layout/Button";
 
 const Contacts = () => {
   return (
-    <div className="my-32">
+    <div className="pt-6 sm:pt-32 pb-10 sm:pb-36 px-2 sm:px-0">
       <Container>
         <Bredcumb />
 
@@ -15,7 +15,7 @@ const Contacts = () => {
           <Headertext className="w-full mb-12" Headertext="Fill up a Form" />
           <div className="flex flex-col gap-6">
             <Input
-              className="w-[779px]"
+              className="max-w-[779px]"
               LabelText="Name"
               type="text"
               placeholder="Your name here"
@@ -23,7 +23,7 @@ const Contacts = () => {
             ></Input>
 
             <Input
-              className="w-[779px]"
+              className="max-w-[779px]"
               LabelText="Email"
               type="text"
               placeholder="Your email here"
@@ -41,7 +41,7 @@ const Contacts = () => {
               ></textarea>
             </div>
 
-            <div>
+            <div className="text-center sm:text-start">
               <Button className={"w-[200px]"} ButtonText={"Post"} />
             </div>
           </div>

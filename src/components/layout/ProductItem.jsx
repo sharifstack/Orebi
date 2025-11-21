@@ -22,7 +22,7 @@ const ProductItem = ({
   let [Offershow, SetOfferShow] = useState(OfferEye);
 
   return (
-    <div className={`w-[370px] ${className} shadow-lg sm:shadow-none sm:mx-0`}>
+    <div className={`w-[370px] ${className} shadow-sm sm:shadow-none sm:mx-0`}>
       <div className="image w-full h-[370px] relative group">
         <img className="w-full h-full object-cover" src={src} />
 

@@ -838,7 +838,7 @@ const Seachbar = () => {
       </Container>
 
       {filterData.length > 0 && (
-        <ul className="bg-white rounded w-full sm:w-[601px] px-5 shadow-md gap-2 absolute left-[51.4%] -translate-x-1/2 z-20 cursor-pointer overflow-y-auto h-auto">
+        <ul className="bg-white rounded w-[341px] sm:w-[601px] px-5 shadow-md gap-2 absolute left-[53%] border sm:left-[51.4%] -translate-x-1/2 z-20 cursor-pointer overflow-y-auto h-auto">
           {filterData.map((item, index) => (
             <li className="flex justify-between items-center py-2 " key={index}>
               <div className="flex items-center gap-5">

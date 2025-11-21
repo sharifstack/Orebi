@@ -31,7 +31,7 @@ export const Shop = () => {
   };
 
   return (
-    <div className="pt-6 sm:pt-32 pb-10 sm:pb-36">
+    <div className="pt-6 sm:pt-32 pb-10 sm:pb-36 px-2 sm:px-0 ">
       <Container>
         <Bredcumb />
 
