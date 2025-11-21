@@ -762,12 +762,12 @@ const Seachbar = () => {
         <div className="account gap-10 hidden md:flex ">
           <div
             onClick={() => setAccount(!account)}
-            className="left flex items-center"
+            className="left flex items-center cursor-pointer"
           >
             <GoPersonFill />
             <IoMdArrowDropdown />
           </div>
-          <div onClick={() => setCart(!cart)} className="cart">
+          <div onClick={() => setCart(!cart)} className="cart cursor-pointer">
             <FaCartShopping />
           </div>
         </div>
@@ -812,7 +812,7 @@ const Seachbar = () => {
         )}
 
         {account && (
-          <div className="account w-[200px] absolute right-[58px] top-full z-10">
+          <div className="account w-[200px] absolute right-[58px] top-full z-10 cursor-pointer">
             <Link to="/myaccount">
               {" "}
               <Button
@@ -820,10 +820,19 @@ const Seachbar = () => {
                 ButtonText="My Account"
               />
             </Link>
-            <Button
-              className="!w-full border !border-[#F0F0F0]"
-              ButtonText="Log Out"
-            />
+            <Link to={"/Login"}>
+              <Button
+                className="!w-full border !border-[#F0F0F0]"
+                ButtonText="Login"
+              />
+            </Link>
+
+            <Link to={"/Sign/Up"}>
+              <Button
+                className="!w-full border !border-[#F0F0F0]"
+                ButtonText="Sign Up"
+              />
+            </Link>
           </div>
         )}
       </Container>

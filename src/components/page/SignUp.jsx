@@ -5,10 +5,9 @@ import Bredcumb from "../layout/Bredcumb";
 import { FaAngleRight, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import Input from "../layout/Input";
 import Button from "../layout/Button";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
-
-
   let Division = [
     "Barishal",
     "Chattogram",
@@ -90,142 +89,131 @@ const SignUp = () => {
   let [Show, setShow] = useState(false);
   let [Repeat, setRepeat] = useState(false);
 
-let [FirstName, setFirstName] = useState('');
-let [FirstNameErr, setFirstNameErr] = useState('');
+  let [FirstName, setFirstName] = useState("");
+  let [FirstNameErr, setFirstNameErr] = useState("");
 
-let [LastName, setLastName] = useState('');
-let [LastNameErr, setLastNameErr] = useState('');
+  let [LastName, setLastName] = useState("");
+  let [LastNameErr, setLastNameErr] = useState("");
 
+  let [Password, setPassword] = useState("");
+  let [PasswordErr, setPasswordErr] = useState("");
 
-let [Password, setPassword] = useState('');
-let [PasswordErr, setPasswordErr] = useState('');
+  let [Repeatpass, setRepeatPass] = useState("");
+  let [RepeatpassErr, setRepeatPassErr] = useState("");
 
-let [Repeatpass, setRepeatPass] = useState('');
-let [RepeatpassErr, setRepeatPassErr] = useState('');
+  let [email, setEmail] = useState("");
+  let [emailErr, setEmailErr] = useState("");
 
+  let [address1, setAddress1] = useState("");
+  let [address1Err, setAddress1Err] = useState("");
 
-let [email, setEmail] = useState('');
-let [emailErr, setEmailErr] = useState('');
+  let [address2, setAddress2] = useState("");
+  let [address2Err, setAddress2Err] = useState("");
 
-let [address1, setAddress1] = useState('');
-let [address1Err, setAddress1Err] = useState('');
+  let [city, setCity] = useState("");
+  let [CityErr, setCityErr] = useState("");
 
-let [address2, setAddress2] = useState('');
-let [address2Err, setAddress2Err] = useState('');
+  let [postalcode, setPostalCode] = useState("");
+  let [postalcodeErr, setPostalCodeErr] = useState("");
 
-let [city, setCity] = useState('');
-let [CityErr, setCityErr] = useState('');
+  let [telephone, setTelephone] = useState("");
+  let [telephoneErr, setTelephoneErr] = useState("");
 
-let [postalcode, setPostalCode] = useState('');
-let [postalcodeErr, setPostalCodeErr] = useState('');
+  let ManageFirstName = (element) => {
+    setFirstName(element.target.value);
+    setFirstNameErr("");
+  };
 
+  let ManageLastName = (element) => {
+    setLastName(element.target.value);
+    setLastNameErr("");
+  };
 
-let [telephone, setTelephone] = useState('');
-let [telephoneErr, setTelephoneErr] = useState('');
+  let ManagePassword = (element) => {
+    setPassword(element.target.value);
+    setPasswordErr("");
+  };
 
+  let ManageRepeatPass = (element) => {
+    setRepeatPass(element.target.value);
+    setRepeatPassErr("");
+  };
 
+  let ManageEmail = (element) => {
+    setEmail(element.target.value);
+    setEmailErr("");
+  };
 
-let ManageFirstName = (element)=>{
-  setFirstName(element.target.value);
-  setFirstNameErr("")
-}
+  let ManageAddress1 = (element) => {
+    setAddress1(element.target.value);
+    setAddress1Err("");
+  };
 
-let ManageLastName = (element)=>{
-  setLastName(element.target.value);
-  setLastNameErr("")
-}
+  let ManageAddress2 = (element) => {
+    setAddress2(element.target.value);
+    setAddress2Err("");
+  };
 
+  let ManageCity = (element) => {
+    setCity(element.target.value);
+    setCityErr("");
+  };
 
-let ManagePassword = (element)=>{
-  setPassword(element.target.value);
-  setPasswordErr("")
-}
+  let ManagePostalCode = (element) => {
+    setPostalCode(element.target.value);
+    setPostalCodeErr("");
+  };
 
+  let ManageTelephone = (element) => {
+    setTelephone(element.target.value);
+    setTelephoneErr("");
+  };
 
+  let ManageSubmit = () => {
+    if (!FirstName) {
+      setFirstNameErr("First name is required!");
+    }
+    if (!LastName) {
+      setLastNameErr("Last name is required!");
+    }
+    if (!Password) {
+      setPasswordErr("Password is required");
+    } else if (
+      !/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/.test(
+        Password
+      )
+    ) {
+      setPasswordErr(
+        "Password must contain one digit from 1 to 9, one lowercase letter, one uppercase letter, one special character, no space, and it must be 8-16 characters long."
+      );
+    }
 
-let ManageRepeatPass = (element)=>{
-  setRepeatPass(element.target.value);
-  setRepeatPassErr("")
-}
-
-
-let ManageEmail = (element)=>{
-  setEmail(element.target.value);
-  setEmailErr("")
-}
-
-
-let ManageAddress1 = (element)=>{
-  setAddress1(element.target.value);
-  setAddress1Err("")
-}
-
-let ManageAddress2 = (element)=>{
-  setAddress2(element.target.value);
-  setAddress2Err("")
-}
-
-let ManageCity = (element)=>{
-  setCity(element.target.value);
-  setCityErr("")
-}
-
-let ManagePostalCode = (element)=>{
-  setPostalCode(element.target.value);
-  setPostalCodeErr("")
-}
-
-
-let ManageTelephone = (element)=>{
-  setTelephone(element.target.value);
-  setTelephoneErr("")
-}
-
-
-let ManageSubmit = ()=>{
-  if(!FirstName){
-    setFirstNameErr("First name is required!");
-  }
-  if(!LastName){
-    setLastNameErr("Last name is required!");
-  }
-  if(!Password){
-    setPasswordErr("Password is required");
-  }
-  else if (!/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/.test(Password)) {
-    setPasswordErr("Password must contain one digit from 1 to 9, one lowercase letter, one uppercase letter, one special character, no space, and it must be 8-16 characters long.")
-  }
-
-  if(!Repeatpass){
-    setRepeatPassErr("Please fill out this field.")
-  }else if (Repeatpass != Password) {
-    setRepeatPassErr("password does not match.");
-    
-  }
-  if(!email){
-    setEmailErr("Email address cannot be blank.")
-  }else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email)) {
-    setEmailErr("Please enter a valid email")
-  }
-  if(!address1){
-    setAddress1Err("Address 1 is required.")
-  }
-  if(!address2){
-    setAddress2Err("Address 2 is required.")
-  }
-  if(!city){
-    setCityErr("City is required.")
-  }
-  if(!postalcode){
-    setPostalCodeErr("Post Code is required.")
-  }
-  if(!telephone){
-    setTelephoneErr("Phone number is required.")
-  }
-};
-
-
-
+    if (!Repeatpass) {
+      setRepeatPassErr("Please fill out this field.");
+    } else if (Repeatpass != Password) {
+      setRepeatPassErr("password does not match.");
+    }
+    if (!email) {
+      setEmailErr("Email address cannot be blank.");
+    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email)) {
+      setEmailErr("Please enter a valid email");
+    }
+    if (!address1) {
+      setAddress1Err("Address 1 is required.");
+    }
+    if (!address2) {
+      setAddress2Err("Address 2 is required.");
+    }
+    if (!city) {
+      setCityErr("City is required.");
+    }
+    if (!postalcode) {
+      setPostalCodeErr("Post Code is required.");
+    }
+    if (!telephone) {
+      setTelephoneErr("Phone number is required.");
+    }
+  };
 
   return (
     <div className="py-32">
@@ -263,7 +251,9 @@ let ManageSubmit = ()=>{
             InputValue={FirstName}
             onChange={ManageFirstName}
           >
-         <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{FirstNameErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {FirstNameErr}
+            </p>
           </Input>
 
           <Input
@@ -275,7 +265,9 @@ let ManageSubmit = ()=>{
             InputValue={LastName}
             onChange={ManageLastName}
           >
-             <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{LastNameErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {LastNameErr}
+            </p>
           </Input>
 
           <Input
@@ -287,7 +279,9 @@ let ManageSubmit = ()=>{
             InputValue={email}
             onChange={ManageEmail}
           >
-         <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{emailErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {emailErr}
+            </p>
           </Input>
 
           <Input
@@ -299,7 +293,9 @@ let ManageSubmit = ()=>{
             InputValue={telephone}
             onChange={ManageTelephone}
           >
-          <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{telephoneErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {telephoneErr}
+            </p>
           </Input>
         </div>
 
@@ -314,7 +310,9 @@ let ManageSubmit = ()=>{
             InputValue={address1}
             onChange={ManageAddress1}
           >
-          <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{address1Err}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {address1Err}
+            </p>
           </Input>
 
           <Input
@@ -326,7 +324,9 @@ let ManageSubmit = ()=>{
             InputValue={address2}
             onChange={ManageAddress2}
           >
-            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{address2Err}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {address2Err}
+            </p>
           </Input>
 
           <Input
@@ -337,9 +337,10 @@ let ManageSubmit = ()=>{
             id="City"
             InputValue={city}
             onChange={ManageCity}
-
           >
-          <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{CityErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {CityErr}
+            </p>
           </Input>
 
           <Input
@@ -351,7 +352,9 @@ let ManageSubmit = ()=>{
             InputValue={postalcode}
             onChange={ManagePostalCode}
           >
-            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{postalcodeErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {postalcodeErr}
+            </p>
           </Input>
 
           <div className="division border-b w-[507px]">
@@ -409,7 +412,9 @@ let ManageSubmit = ()=>{
               />
             )}
 
-            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{PasswordErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {PasswordErr}
+            </p>
           </Input>
 
           <Input
@@ -433,7 +438,9 @@ let ManageSubmit = ()=>{
               />
             )}
 
-            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">{RepeatpassErr}</p>
+            <p className="absolute left-0 top-full text-red-600 text-xs font-DM mt-1">
+              {RepeatpassErr}
+            </p>
           </Input>
         </div>
 
@@ -453,27 +460,51 @@ let ManageSubmit = ()=>{
 
         <div className="newsletter my-6 flex gap-10 items-center">
           <div>
-            <p className="text-ptext text-sm font-DM font-normal">Subscribe Newsletter</p>
+            <p className="text-ptext text-sm font-DM font-normal">
+              Subscribe Newsletter
+            </p>
           </div>
 
           <div className="flex gap-3 items-center">
-            <input className="relative appearance-none w-2.5 h-2.5 border border-[#767676] checked:bg-[#767676] after:content[''] after:absolute after:w-2 after:h-2 after:bg-[#767676] after:border-white after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:border after:opacity-0 checked:after:opacity-100" type="radio" id="Yes" name="Newsletter"/>
-             <label className="text-ptext text-sm font-DM font-normal" htmlFor="Yes">
-            Yes
+            <input
+              className="relative appearance-none w-2.5 h-2.5 border border-[#767676] checked:bg-[#767676] after:content[''] after:absolute after:w-2 after:h-2 after:bg-[#767676] after:border-white after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:border after:opacity-0 checked:after:opacity-100"
+              type="radio"
+              id="Yes"
+              name="Newsletter"
+            />
+            <label
+              className="text-ptext text-sm font-DM font-normal"
+              htmlFor="Yes"
+            >
+              Yes
             </label>
           </div>
 
           <div className="flex gap-3 items-center">
-            <input className="relative appearance-none w-2.5 h-2.5 border border-[#767676] checked:bg-[#767676] after:content[''] after:absolute after:w-2 after:h-2 after:bg-[#767676] after:border-white after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:border after:opacity-0 checked:after:opacity-100" type="radio" id="No"  name="Newsletter"/>
-            <label className="text-ptext text-sm font-DM font-normal" htmlFor="No">
-            No
+            <input
+              className="relative appearance-none w-2.5 h-2.5 border border-[#767676] checked:bg-[#767676] after:content[''] after:absolute after:w-2 after:h-2 after:bg-[#767676] after:border-white after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:border after:opacity-0 checked:after:opacity-100"
+              type="radio"
+              id="No"
+              name="Newsletter"
+            />
+            <label
+              className="text-ptext text-sm font-DM font-normal"
+              htmlFor="No"
+            >
+              No
             </label>
           </div>
         </div>
 
         <div className="Loginbtn">
-            <Button onClick={ManageSubmit} className="w-[200px] !font-bold" ButtonText="Log in"/>
-          </div>
+          <Link to={"/Login"}>
+            <Button
+              onClick={ManageSubmit}
+              className="w-[200px] !font-bold"
+              ButtonText="Log in"
+            />
+          </Link>
+        </div>
       </Container>
     </div>
   );
