@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Container from "./layout/Container";
 import Headertext from "./layout/Headertext";
 import ProductItem from "./layout/ProductItem";
@@ -10,7 +10,14 @@ import product04 from "/Products/product04.jpg";
 import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Arrivals = () => {
+  const containerRef = useRef(null);
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -75,48 +82,134 @@ const Arrivals = () => {
     ],
   };
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      // header reveal
+      const header = containerRef.current?.querySelector(".arrivals-header");
+      if (header) {
+        gsap.from(header, {
+          autoAlpha: 0,
+          y: 18,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: header,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
+
+      // select slides (we wrap each slide with .arrival-slide)
+      const slides = gsap.utils.toArray(".arrival-slide");
+
+      slides.forEach((slide) => {
+        if (!slide) return;
+        // target the product card inside the slide
+        const card = slide.querySelector(".product-card") || slide;
+
+        gsap.fromTo(
+          card,
+          { autoAlpha: 0, y: 40, scale: 0.995 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: slide,
+              start: "top 85%",
+              end: "bottom 20%",
+              toggleActions: "play reverse play reverse",
+              // markers: true, // enable for debugging
+            },
+          }
+        );
+
+        // optional micro parallax while in view (subtle)
+        gsap.to(card, {
+          y: -6,
+          ease: "none",
+          scrollTrigger: {
+            trigger: slide,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.6,
+          },
+        });
+      });
+
+      // ensure correct layout positions if images load late
+      ScrollTrigger.refresh();
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div>
+    <div ref={containerRef}>
       <Container className="md:mb-12 mb-3 ">
-        <Headertext Headertext="New Arrivals" />
+        <div className="arrivals-header">
+          <Headertext Headertext="New Arrivals" />
+        </div>
       </Container>
 
       <Container className="max-w-[1640px]">
         <Slider {...settings}>
-          <ProductItem
-            className="w-full px-2"
-            src={product01}
-            Pname="Basic Crew Neck Tee"
-            Price="44.00"
-            Color="Black"
-            Offer="20%"
-            OfferEye={true}
-          />
-          <ProductItem
-            className="w-full px-2"
-            src={product02}
-            Pname="Basic Crew Neck Tee"
-            Price="44.00"
-            Color="Black"
-            Offer="New"
-            OfferEye={true}
-          />
-          <ProductItem
-            className="w-full px-2"
-            src={product03}
-            Pname="Basic Crew Neck Tee"
-            Price="44.00"
-            Color="Black"
-          />
-          <ProductItem
-            className="w-full px-2"
-            src={product04}
-            Pname="Basic Crew Neck Tee"
-            Price="44.00"
-            Color="Black"
-            Offer="New"
-            OfferEye={true}
-          />
+          <div className="arrival-slide px-2">
+            <div className="product-card">
+              <ProductItem
+                className="w-full"
+                src={product01}
+                Pname="Basic Crew Neck Tee"
+                Price="44.00"
+                Color="Black"
+                Offer="20%"
+                OfferEye={true}
+              />
+            </div>
+          </div>
+
+          <div className="arrival-slide px-2">
+            <div className="product-card">
+              <ProductItem
+                className="w-full"
+                src={product02}
+                Pname="Basic Crew Neck Tee"
+                Price="44.00"
+                Color="Black"
+                Offer="New"
+                OfferEye={true}
+              />
+            </div>
+          </div>
+
+          <div className="arrival-slide px-2">
+            <div className="product-card">
+              <ProductItem
+                className="w-full"
+                src={product03}
+                Pname="Basic Crew Neck Tee"
+                Price="44.00"
+                Color="Black"
+              />
+            </div>
+          </div>
+
+          <div className="arrival-slide px-2">
+            <div className="product-card">
+              <ProductItem
+                className="w-full"
+                src={product04}
+                Pname="Basic Crew Neck Tee"
+                Price="44.00"
+                Color="Black"
+                Offer="New"
+                OfferEye={true}
+              />
+            </div>
+          </div>
         </Slider>
       </Container>
     </div>

@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white">
+    <nav className="bg-slate-300 md:bg-white">
       <Container className="md:py-8 p-4 px-3 md:px-0 flex md:justify-center justify-end gap-5 md:gap-0 items-center relative">
         <Image
           className="absolute left-3 md:left-0 top-1/2 -translate-y-1/2"
